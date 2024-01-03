@@ -26,11 +26,47 @@ h1{
     display: flex;
     width: 1000px;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding:  0 20px;
     
     .game-area{
-        text-align: center;
+        .inputs{
+            div{
+                .input-letter{
+                    width: 60px;
+                    height: 60px;
+                    text-align: center;
+                    padding: 20px;
+                    border: 1px solid #eee;
+                    margin: 5px; 
+                    outline-color: #eee;
+                    color: black;
+                    font-weight: bold;
+                    font-size: 25px;
+                    caret-color: var(--primary-color);
+                    &.yes-in-place{
+                        background-color: #f89e13;
+                        outline-color: #f89e13;
+                        color: white;
+                    }
+                    &.not-in-place{
+                        background-color: #18ba89;
+                        outline-color: #18ba89;
+                        color: white;
+                    }
+                    &.wrong{
+                        background-color: #27303f;
+                        outline-color: #27303f;
+                        color: white;
+                    }
+                }
+            }
+
+            .disabled-input{
+                pointer-events: none;
+                opacity: 0.6;
+            }
+        }
     }
 
     .key-color{
@@ -81,3 +117,4 @@ footer{
         font-weight: bold;
     }
 }
+
